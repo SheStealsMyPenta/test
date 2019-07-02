@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+            <!--android:id="@+id/action_config"-->
+            <!--android:title="@string/config"-->
+             <!--android:tooltipText="@string/config"-->
+            <!--app:showAsAction="collapseActionView"/>-->
+    <item
+            android:id="@+id/UHF"
+            android:title="@string/UHFConfig"
+            android:tooltipText="@string/UHFConfig"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/AA"
+            android:title="@string/AAConfig"
+            android:tooltipText="@string/AAConfig"
+
+            app:showAsAction="collapseActionView"/>
+    <!--<item-->
+            <!--android:id="@+id/light"-->
+            <!--android:title="@string/lightConfig"-->
+            <!--android:icon="@android:drawable/ic_menu_search"-->
+            <!--app:showAsAction="collapseActionView"/>-->
+    <item
+            android:id="@+id/infrared"
+            android:title="@string/infraredConfig"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+
+</menu>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="130dp"
+                  android:layout_marginRight="4dp"
+                  android:layout_marginLeft="4dp"
+                  android:layout_marginTop="10dp"
+                  android:background="@drawable/bg_edittext"
+                  android:orientation="vertical"
+
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+
+                      android:orientation="horizontal"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:textColor="@color/black"
+                      android:id="@+id/nameOfMonitor"
+                      android:textSize="16dp"
+                      android:text="特高频局方监测"
+                      android:gravity="center_vertical|center_horizontal"
+            />
+            <com.suke.widget.SwitchButton android:layout_width="match_parent"
+                                          android:layout_height="30dp"
+                                          android:layout_gravity="center_vertical"
+                                          android:id="@+id/switchBtn"
+                                          android:layout_weight="4"
+                                          android:layout_marginRight="3dp"
+                                          android:gravity="center_horizontal|center_vertical"
+            />
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/blueCus"
+        />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="3"
+                      android:text="监测装置："
+                      android:textColor="@color/black"
+                      android:textSize="16dp"
+                      android:gravity="center_vertical|center_horizontal"
+            />
+            <android.support.v7.widget.AppCompatSpinner android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+
+                                                        android:layout_weight="1"
+                                                        android:text=""
+                                                        android:id="@+id/monitorDevice"
+
+                                                        android:gravity="center_horizontal|center_vertical"
+            />
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="3"
+                      android:text="数据通道："
+                      android:textColor="@color/black"
+                      android:textSize="16dp"
+                      android:gravity="center_vertical|center_horizontal"
+            />
+            <android.support.v7.widget.AppCompatSpinner android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight="1"
+                                                        android:visibility="gone"
+                                                        android:text="开启"
+                                                        android:id="@+id/channel"
+                                                        android:gravity="center_horizontal|center_vertical"
+            />
+            <EditText android:layout_width="match_parent"
+                      android:inputType="number"
+                      android:visibility="visible"
+                      android:layout_weight="1"
+
+                      android:id="@+id/channelEdit"
+                      android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

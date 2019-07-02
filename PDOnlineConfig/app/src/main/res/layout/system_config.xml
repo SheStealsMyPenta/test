@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/container"
+              android:background="@color/white"
+
+              android:orientation="vertical">
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/toolbar"
+                                       app:contentInsetLeft="0dp"
+                                       app:contentInsetStart="0dp"
+                                       android:contentInsetStart="0dp"
+                                       android:contentInsetLeft="0dp"
+                                       android:layout_height="wrap_content"
+                                       android:layout_width="match_parent"
+                                       app:popupTheme="@style/OverflowMenuStyle"
+                                       android:background="@color/colorPrimary">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_marginTop="3dp"
+                      android:layout_height="50dp">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="vertical"
+                          android:layout_weight="1"
+                          android:id="@+id/backToListLayout"
+                          android:layout_height="match_parent">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                              android:layout_height="match_parent">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/title"
+                            android:layout_height="match_parent"
+                            android:text="主机系统配置"
+                            android:paddingRight="50dp"
+                            android:layout_weight="2.0"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="530dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/text_border"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:id="@+id/updater">
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="3dp"
+
+        >
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical"
+            >
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="1.07"
+                              android:layout_height="match_parent"></LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:layout_marginTop="2dp"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="服  务  器："
+                              android:gravity="center_vertical|end"
+                              android:textColor="@color/black"
+                              android:layout_weight="2"
+                    />
+                    <com.pd.config.pdonlineconfig.vies.SuperEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edittext"
+                            android:layout_marginRight="18dp"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/ipAddress"
+                    ></com.pd.config.pdonlineconfig.vies.SuperEditText>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_weight="2"
+                              android:gravity="center_vertical|end"
+                              android:layout_height="match_parent"
+                              android:text="端  口  号："
+                              android:textColor="@color/black"
+                    />
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="47dp"
+                            android:layout_weight="1"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="5"
+                            app:hintTextAppearance="@style/MyHintStyle"
+                    >
+                        <EditText android:layout_width="match_parent"
+                                  android:id="@+id/port"
+                                  android:background="@drawable/bg_edittext"
+                                  android:height="40dp"
+                                  android:paddingLeft="10dp"
+                                  android:layout_marginRight="18dp"
+                                  android:layout_height="match_parent"
+                                  android:inputType="number"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_weight="2"
+                              android:gravity="center_vertical|end"
+                              android:textColor="@color/black"
+                              android:layout_height="match_parent"
+                              android:text="@string/uploadInterval"
+                    />
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@drawable/bg_edittext"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/uploadInterval"
+                                android:spinnerMode="dropdown"
+                                android:entries="@array/arrayname"
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="@string/deviceIpAddress"
+                              android:gravity="center_vertical|end"
+                              android:textColor="@color/black"
+                              android:layout_weight="2"
+                    />
+                    <com.pd.config.pdonlineconfig.vies.SuperEditText android:layout_width="match_parent"
+                                                                     android:layout_height="40dp"
+                                                                     android:layout_gravity="center_vertical"
+                                                                     android:layout_weight="1"
+                                                                     android:background="@drawable/bg_edittext"
+                                                                     android:layout_marginRight="18dp"
+                                                                     android:id="@+id/deviceIpAddress"
+                    ></com.pd.config.pdonlineconfig.vies.SuperEditText>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="@string/subnetMask"
+                              android:gravity="center_vertical|end"
+                              android:textColor="@color/black"
+                              android:layout_weight="2"
+                    />
+                    <com.pd.config.pdonlineconfig.vies.SuperEditText android:layout_width="match_parent"
+                                                                     android:layout_height="40dp"
+                                                                     android:layout_weight="1"
+                                                                     android:layout_gravity="center_vertical"
+                                                                     android:background="@drawable/bg_edittext"
+                                                                     android:layout_marginRight="18dp"
+                                                                     android:id="@+id/subnetMask"
+                    ></com.pd.config.pdonlineconfig.vies.SuperEditText>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="@string/gateWay"
+                              android:gravity="center_vertical|end"
+                              android:textColor="@color/black"
+                              android:layout_weight="2"
+                    />
+                    <com.pd.config.pdonlineconfig.vies.SuperEditText android:layout_width="match_parent"
+                                                                     android:layout_height="40dp"
+                                                                     android:layout_weight="1"
+                                                                     android:background="@drawable/bg_edittext"
+                                                                     android:layout_marginRight="18dp"
+                                                                     android:layout_gravity="center_vertical"
+                                                                     android:id="@+id/gateWay"
+                    ></com.pd.config.pdonlineconfig.vies.SuperEditText>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:visibility="gone"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_weight="2"
+                              android:gravity="bottom|end"
+                              android:paddingBottom="10dp"
+
+                              android:layout_height="match_parent"
+                              android:text="@string/typeOfInternet"
+                    />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                  android:layout_weight="1"
+
+                    >
+                        <android.support.v7.widget.AppCompatSpinner
+                                android:layout_width="150dp"
+                                android:layout_height="40dp"
+                                android:paddingLeft="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/text_border"
+                                android:id="@+id/typeOfInternet"
+                                android:spinnerMode="dropdown"
+                                android:entries="@array/internet"
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_weight="2"
+                              android:gravity="center_vertical|end"
+                              android:textColor="@color/black"
+
+                              android:layout_height="match_parent"
+                              android:text="@string/syncType"
+                    />
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/syncType"
+                                android:layout_marginRight="18dp"
+                                android:background="@drawable/bg_edittext"
+                                android:spinnerMode="dropdown"
+                                android:entries="@array/syncType"
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:visibility="gone"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_weight="2"
+                              android:gravity="bottom|end"
+                              android:paddingBottom="10dp"
+
+                              android:layout_height="match_parent"
+                              android:text="@string/syncFrequency"
+                    />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                  android:layout_weight="1"
+
+                    >
+                        <EditText android:layout_width="75dp"
+                                  android:paddingLeft="10dp"
+                                  android:id="@+id/syncFrequency"
+                                  android:inputType="number"
+                                  android:text="50"
+                                  android:layout_gravity="center_vertical"
+                                  android:gravity="center_vertical"
+                                  android:background="@drawable/bg_edittext"
+                                  android:layout_height="40dp"/>
+                        <TextView android:layout_width="match_parent"
+                                  android:text="  Hz"
+                                  android:textColor="@color/black"
+
+                                  android:gravity="center_vertical"
+                                  android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="@string/restartHour"
+                              android:gravity="center_vertical|end"
+                              android:layout_weight="2"
+
+                              android:textColor="@color/black"
+                    />
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1">
+                        <android.support.v7.widget.AppCompatSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/isRestart"
+                                android:layout_marginRight="18dp"
+                                android:background="@drawable/bg_edittext"
+                                android:spinnerMode="dropdown"
+                                android:entries="@array/isRestart"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:text="@string/timeToRestart"
+                              android:gravity="center_vertical|end"
+                              android:layout_weight="2"
+                              android:textColor="@color/black"
+
+                    />
+
+                    <TextView android:layout_width="match_parent"
+                              android:paddingLeft="10dp"
+                              android:layout_marginRight="18dp"
+                              android:background="@drawable/bg_edittext"
+                              android:layout_weight="1"
+                              android:textSize="15dp"
+                              android:textColor="@color/black"
+                              android:gravity="center_vertical"
+                              android:layout_height="40dp"
+                              android:inputType="number"
+                              android:id="@+id/timePicker"
+                    />
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                >
+                    <TextView android:layout_width="match_parent"
+                              android:layout_weight="2"
+                              android:gravity="center_vertical|end"
+                              android:layout_height="match_parent"
+                              android:text="通讯地址："
+                              android:textColor="@color/black"
+                    />
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="47dp"
+                            android:layout_weight="1"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="5"
+                            app:hintTextAppearance="@style/MyHintStyle"
+                    >
+                        <EditText android:layout_width="match_parent"
+                                  android:id="@+id/address"
+                                  android:background="@drawable/bg_edittext"
+                                  android:height="40dp"
+                                  android:paddingLeft="10dp"
+                                  android:layout_marginRight="18dp"
+                                  android:layout_height="match_parent"
+                                  android:inputType="number"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1.07"
+                ></LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <Button android:layout_width="131dp"
+            android:text="@string/confirm"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_default"
+            android:layout_height="40dp"
+            android:layout_marginEnd="18dp"
+            android:textSize="@dimen/defaultBtn"
+            android:id="@+id/confirmBtn"
+
+    />
+
+
+</LinearLayout>

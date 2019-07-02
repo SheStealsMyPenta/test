@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/configRunTime"
+            android:title="@string/configRunTime"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/configLog"
+            android:title="@string/configLog"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/data"
+            android:title="@string/data"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/info"
+            android:title="@string/deviceInfo"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+
+</menu>

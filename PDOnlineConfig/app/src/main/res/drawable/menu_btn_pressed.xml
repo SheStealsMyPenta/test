@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--按键正常状态下-->
+<!-- shape的默认形状是rectangle，还有oval(椭圆),line（线）,ring（圆环），我就用过rectangle,其他的大家可以试一试 -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <!-- 矩形的圆角弧度 -->
+    <corners android:radius="5dp" />
+    <!-- 矩形的填充色 -->
+    <solid android:color="#AF00ff00" />
+
+    <!-- 矩形的边框的宽度,每段虚线的长度，和两段虚线之间的颜色和颜色 -->
+
+</shape>

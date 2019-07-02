@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item-->
+    <!--android:id="@+id/action_config"-->
+    <!--android:title="@string/config"-->
+    <!--android:tooltipText="@string/config"-->
+    <!--app:showAsAction="collapseActionView"/>-->
+    <item
+            android:id="@+id/uhf"
+            android:title="特高频"
+            android:tooltipText="@string/UHFConfig"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/ae"
+            android:title="空气式超声"
+            android:tooltipText="@string/AAConfig"
+
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/hf"
+            android:title="高频电流"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/tev"
+            android:title="暂态地电压"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/humAndTemp"
+            android:title="温湿度"
+            android:icon="@android:drawable/ic_menu_search"
+            app:showAsAction="collapseActionView"/>
+
+
+</menu>

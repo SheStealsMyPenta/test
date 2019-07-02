@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#444444"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/toolbar"
+                                       android:layout_height="wrap_content"
+                                       android:layout_width="match_parent"
+                                       android:background="@color/colorPrimary">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="内部参数"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+    >
+        <android.support.v4.widget.SwipeRefreshLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="409dp"
+                android:orientation="vertical"
+                android:id="@+id/swipeLayout" >
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="#ffffff"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="3dp"
+
+            >
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:orientation="vertical"
+                >
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:gravity="center_vertical"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+                                  android:layout_height="wrap_content"
+                                  android:text="@string/filterFrequency"
+                        />
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_gravity="center_vertical"
+                                      android:layout_weight="1">
+                            <android.support.v7.widget.AppCompatSpinner
+                                    android:layout_width="150dp"
+                                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                                    android:id="@+id/filterFrequency"
+                                    android:layout_height="wrap_content"
+                                    android:spinnerMode="dropdown"
+                                    android:entries="@array/filterFrequency"
+                            />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1.05"
+
+                                  android:orientation="horizontal"
+                                  android:gravity="center_vertical"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+                                  android:layout_height="match_parent"
+                                  android:text="@string/thresholdValue"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:id="@+id/thresholdContainer"
+                                app:errorTextAppearance="@style/hinErr"
+                                app:hintEnabled="true"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:id="@+id/threshold"
+                                      android:layout_height="match_parent"
+                                      android:inputType="number"
+                            />
+                            <TextView android:layout_width="30dp"
+                                      android:layout_height="match_parent"
+                                      android:text="dB"
+                                      android:paddingBottom="10dp"
+                                      android:gravity="bottom"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+                                  android:layout_height="match_parent"
+                                  android:text="@string/kValue"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:id="@+id/kValueLayout"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:layout_height="match_parent"
+                                      android:inputType="numberSigned|numberDecimal"
+                                      android:id="@+id/kValue"
+
+                            />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+
+                                  android:layout_height="match_parent"
+                                  android:text="@string/bValue"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:id="@+id/bValueLayout"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:layout_height="match_parent"
+                                      android:inputType="numberSigned|numberDecimal"
+                                      android:id="@+id/bValue"
+
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+
+                                  android:layout_height="match_parent"
+                                  android:text="@string/aaThresholdValue"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                                android:id="@+id/aaSignalLayout"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:layout_height="match_parent"
+                                      android:inputType="number"
+                                      android:id="@+id/aaSignal"
+
+                            />
+                            <TextView android:layout_width="30dp"
+                                      android:layout_height="match_parent"
+                                      android:text="dB"
+                                      android:paddingBottom="10dp"
+                                      android:gravity="bottom"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+
+                                  android:layout_height="match_parent"
+                                  android:text="@string/aaKValue"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                                android:id="@+id/aaKValueLayout"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:layout_height="match_parent"
+                                      android:inputType="numberSigned|numberDecimal"
+                                      android:id="@+id/aaKValue"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+
+                                  android:layout_height="match_parent"
+                                  android:text="@string/aaBValue"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                                android:id="@+id/aaBValueLayout"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:layout_height="match_parent"
+                                      android:inputType="numberSigned|numberDecimal"
+                                      android:id="@+id/aaBValue"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+
+                                  android:layout_height="match_parent"
+                                  android:text="@string/syncType"
+                        />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                      android:layout_weight="1">
+                            <android.support.v7.widget.AppCompatSpinner
+                                    android:layout_width="150dp"
+                                    android:layout_height="40dp"
+                                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_gravity="bottom"
+                                    android:spinnerMode="dropdown"
+                                    android:id="@+id/syncType"
+                                    android:entries="@array/syncType"
+                            />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                    >
+                        <TextView android:layout_width="match_parent"
+                                  android:layout_weight="2"
+                                  android:gravity="bottom|end"
+                                  android:paddingBottom="10dp"
+
+                                  android:layout_height="match_parent"
+                                  android:text="@string/syncFrequency"
+                        />
+                        <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                app:hintTextAppearance="@style/MyHintStyle"
+                                android:id="@+id/frequencyLayout"
+                        >
+                            <EditText android:layout_width="80dp"
+                                      android:layout_height="match_parent"
+                                      android:inputType="numberSigned|numberDecimal"
+                                      android:id="@+id/frequency"
+
+                            />
+                            <TextView android:layout_width="30dp"
+                                      android:layout_height="match_parent"
+                                      android:text="Hz"
+                                      android:paddingBottom="10dp"
+                                      android:gravity="bottom"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <View
+                android:layout_height="20dp"
+                android:layout_width="0dp"
+        />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:gravity="right"
+        >
+            <Button style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/setPdParams"
+                    android:id="@+id/settingBtn"
+                    android:enabled="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

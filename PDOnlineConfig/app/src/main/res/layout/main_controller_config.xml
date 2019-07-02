@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical"
+                  android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                           android:id="@+id/toolbar"
+                                           app:contentInsetLeft="0dp"
+                                           app:contentInsetStart="0dp"
+                                           android:layout_height="wrap_content"
+                                           android:layout_width="match_parent"
+                                           android:background="@color/colorPrimary">
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="3dp"
+                          android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="vertical"
+                              android:layout_weight="1"
+                              android:id="@+id/backToListLayout"
+                              android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_weight="1"
+                                  android:layout_height="match_parent">
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="主机编号："
+                                android:layout_weight="2.1"
+                                android:gravity="end"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"/>
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1.3"
+                                android:id="@+id/codeOfDevice"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal"
+                                  android:layout_height="match_parent">
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="I  P 地 址："
+                                android:layout_weight="2.1"
+                                android:gravity="end"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"/>
+                        <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1.3"
+                                android:id="@+id/ipAddress"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="3.5"
+                              android:layout_gravity="center_vertical"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+
+                              android:textColor="@color/white"
+                              android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:background="@drawable/selected_bg"
+                      android:id="@+id/monitorDeviceMange"
+                      android:orientation="horizontal"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:text="监测装置管理"
+                      android:textSize="18dp"
+                      android:layout_weight="1"
+                      android:textAlignment="center"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="10dp"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="match_parent"
+                      android:text="＞"
+                      android:textSize="14dp"
+                      android:textColor="#DCDCDC"
+                      android:layout_weight="9"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="5dp"
+                      android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:background="#DCDCDC"
+              android:layout_marginRight="10dp"
+              android:layout_marginLeft="10dp"
+              android:layout_height="1px"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:id="@+id/detectedDeviceManage"
+                      android:background="@drawable/selected_bg"
+                      android:layout_height="50dp">
+            <TextView android:layout_width="match_parent"
+                      android:text="被测设备管理"
+                      android:textAlignment="center"
+                      android:textSize="18dp"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="10dp"
+                      android:layout_weight="1"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="match_parent"
+                      android:text="＞"
+                      android:textSize="14dp"
+                      android:textColor="#DCDCDC"
+                      android:layout_weight="9"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="5dp"
+                      android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:background="#DCDCDC"
+              android:layout_marginRight="10dp"
+              android:layout_marginLeft="10dp"
+              android:layout_height="1px"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:background="@drawable/selected_bg"
+                      android:id="@+id/mainControllerConfig"
+                      android:layout_height="50dp">
+            <TextView android:layout_width="match_parent"
+                      android:text="主机系统配置"
+                      android:textSize="18dp"
+                      android:layout_weight="1"
+                      android:textAlignment="center"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="10dp"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="match_parent"
+                      android:text="＞"
+                      android:textSize="14dp"
+                      android:textColor="#DCDCDC"
+                      android:layout_weight="9"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="5dp"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:background="#DCDCDC"
+              android:layout_marginRight="10dp"
+              android:layout_marginLeft="10dp"
+              android:layout_height="1px"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:background="@drawable/selected_bg"
+                      android:id="@+id/mainControllerInfo"
+                      android:layout_height="50dp">
+            <TextView android:layout_width="match_parent"
+                      android:text="主机系统信息"
+                      android:textSize="18dp"
+                      android:textAlignment="center"
+                      android:layout_weight="1"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="10dp"
+                      android:layout_height="match_parent"/>
+            <TextView android:layout_width="match_parent"
+                      android:text="＞"
+                      android:textSize="14dp"
+                      android:textColor="#DCDCDC"
+                      android:layout_weight="9"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+                      android:paddingLeft="5dp"
+                      android:layout_height="match_parent"/>
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:background="#DCDCDC"
+              android:layout_marginRight="10dp"
+              android:layout_marginLeft="10dp"
+              android:layout_height="1px"/>
+    </LinearLayout>
+
+
+</LinearLayout>

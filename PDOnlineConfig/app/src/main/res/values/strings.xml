@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">PDOnlineConfig</string>
+    <string name="codeOfDevice">主机编号：</string>
+    <string name="softwarePatch">软件版本：</string>
+    <string name="hardwarePatch">硬件版本：</string>
+    <string name="numberOfFiles">文件个数：</string>
+    <string name="storageRemain">剩余存储：</string>
+    <string name="numberOfUnit">检测单元：</string>
+      <string name="password">123456</string>
+    <string name="port">端口号：</string>
+    <string name="deviceIpAddress">本机地址：</string>
+    <string name="subnetMask">子网掩码：</string>
+    <string name="gateWay">默认网关：</string>
+    <string name="restartOnTime">定时重启：</string>
+    <string name="uploadInterval">数据上传：</string>
+    <string name="filterFrequency">滤波频率：</string>
+    <string name="thresholdValue">检测阈值：</string>
+    <string name="kValue">UHF标定K：</string>
+    <string name="bValue">UFH标定B：</string>
+    <string name="aaThresholdValue">AA信号阈值：</string>
+    <string name="aaKValue">标定K值：</string>
+    <string name="aaBValue">标定B值：</string>
+    <string name="syncType">同步类型：</string>
+    <string name="syncFrequency">同步频率：</string>
+    <string name="restartHour">定时重启：</string>
+    <string name="restartMinute">定时重启分钟：</string>
+    <string name="typeOfInternet">网络传输类型：</string>
+    <string name="hintPort">端口号</string>
+    <string name="restart">重启</string>
+    <string name="setPdParams">设置PD参数</string>
+    <string name="keepAlive">不重启</string>
+    <string name="timeToRestart">重启时间：</string>
+    <string name="point">·</string>
+   <string name="setBasicParams">设置基本参数</string>
+    <string name="startTest">开始采集</string>
+    <string name="clearDataBtn">清空数据</string>
+    <string name="clearLog">清空日志</string>
+    <string name="settingPD">内部参数</string>
+    <string name="config">配置</string>
+    <string name="listOfDevice">装置列表</string>
+    <string name="UHFConfig">特高频</string>
+    <string name="AAConfig">空气式超声</string>
+    <string name="lightConfig">视频图像</string>
+    <string name="infraredConfig">红外热像</string>
+    <string name="resolution">分辨率：</string>
+    <string name="brightness">亮度：</string>
+    <string name="contrast">对比度：</string>
+    <string name="format">采集格式：</string>
+    <string name="configRunTime">运行配置</string>
+    <string name="configLog">日志</string>
+    <string name="data">设备数据</string>
+    <string name="deviceInfo">设备信息</string>
+    <string name="info">信息</string>
+    <string name="save">保存</string>
+    <string name="goback">返回</string>
+    <string name="refresh">刷新</string>
+    <string name="add">添加</string>
+    <string name="choose">选择</string>
+    <string name="typeOfDevice">设备类型：</string>
+    <string name="confirm">保存</string>
+    <string name="ipAddress">IP地址：</string>
+    <string name="deviceSN">被测设备：</string>
+    <string name="nameOfDevice">设备名称</string>
+    <string name="codeOfEquip">设备编号</string>
+    <string name="delte">删除</string>
+    <string-array name="arrayname">　　
+        <item>10分钟</item>　
+        <item>30分钟</item>
+        <item>60分钟</item>
+    </string-array>
+    <string-array name="internet">　　
+        <item>4G</item>　
+        <item>WiFi</item>
+    </string-array>
+    <string-array name="filterFrequency">　　
+        <item>全频段</item>　
+        <item>低频段</item>
+        <item>高频段</item>
+    </string-array>
+    <string-array name="syncType">　　
+        <item>内同步</item>　
+        <item>外同步</item>
+    </string-array>
+    <string-array name="typeOfDevice">　　
+        <item>环境监测</item>　
+        <item>开关柜监测</item>
+        <item>无线测温</item>
+    </string-array>
+    <string-array name="watchedDevice">　　
+        <item>环境</item>　
+        <item>开关柜</item>
+    </string-array>
+    <string-array name="resolutionArr">
+        <item>1080p</item>　
+        <item>720p</item>
+    </string-array>
+    <string-array name="format">
+        <item>YUYV</item>　
+        <item>mJPG</item>
+    </string-array>
+    <string-array name="isRestart">
+        <item>关闭</item>　
+        <item>开启</item>
+    </string-array>
+</resources>

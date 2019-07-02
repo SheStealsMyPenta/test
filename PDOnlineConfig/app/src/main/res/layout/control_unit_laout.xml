@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/text_border"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:id="@+id/swipeLayoutInfo" >
+      <android.support.v7.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              app:cardCornerRadius="2dp"
+              app:cardElevation="3dp"
+
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+        >
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal"
+            >
+                <TextView
+                        android:text="@string/codeOfDevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:layout_weight="2"
+                        android:textColor="@color/black"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="0000000000000000"
+                        android:id="@+id/codeOfDevice"
+                        android:gravity="center_vertical"
+                      android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal"
+
+            >
+                <TextView
+                        android:text="@string/softwarePatch"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center_vertical|end"
+                        android:layout_weight="2"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:id="@+id/softwarePatch"
+                        android:textColor="@color/black"
+                        android:text="2019"
+                        android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal"
+
+            >
+                <TextView
+                        android:text="@string/hardwarePatch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:layout_weight="2"
+                        android:textColor="@color/black"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/hardwarePatch"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="2017"
+                        android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:visibility="gone"
+                          android:orientation="horizontal"
+
+            >
+                <TextView
+                        android:text="@string/numberOfFiles"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center_vertical|end"
+                        android:layout_weight="2"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/numberOfFiles"
+                        android:gravity="center_vertical"
+                        android:text="100Mb"
+                        android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal"
+
+            >
+                <TextView
+                        android:text="@string/storageRemain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:layout_weight="2"
+                        android:textColor="@color/black"
+
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/storageRemain"
+                        android:text="1G"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal"
+
+            >
+                <TextView
+                        android:text="@string/numberOfUnit"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:layout_weight="2"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/numberOfUnit"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:text="10个"
+                        android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Your card content -->
+
+    </android.support.v7.widget.CardView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="horizontal"
+                  android:gravity="left"
+                  android:layout_margin="10dp"
+    >
+
+        <!--<Button style="@style/Widget.AppCompat.Button.Colored"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:text="@string/settingPD"-->
+                <!--android:id="@+id/pdSetting"-->
+                <!--android:enabled="true"/>-->
+        <Button android:background="@drawable/btn_default"
+                android:textColor="@color/white"
+                android:layout_height="40dp"
+                android:visibility="visible"
+                android:textSize="@dimen/defaultBtn"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/clearLog"
+                android:id="@+id/clearLogBtn"
+                android:enabled="true"/>
+        <Button android:background="@drawable/btn_default"
+                android:textColor="@color/white"
+                android:layout_height="40dp"
+
+                android:layout_width="wrap_content"
+               android:layout_marginLeft="30dp"
+                android:text="@string/clearDataBtn"
+                android:textSize="@dimen/defaultBtn"
+                android:id="@+id/clearDataBtn"
+                android:enabled="true"/>
+    </LinearLayout>
+</LinearLayout>

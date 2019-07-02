@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/container"
+              android:background="@color/white"
+
+              android:orientation="vertical">
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/toolbar"
+                                       app:contentInsetLeft="0dp"
+                                       app:contentInsetStart="0dp"
+                                       android:contentInsetStart="0dp"
+                                       android:contentInsetLeft="0dp"
+                                       android:layout_height="wrap_content"
+                                       android:layout_width="match_parent"
+                                       app:popupTheme="@style/OverflowMenuStyle"
+                                       android:background="@color/colorPrimary">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_marginTop="3dp"
+                      android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="vertical"
+                          android:layout_weight="1"
+                          style="@style/Widget.AppCompat.Button.Colored"
+                          android:id="@+id/backToListLayout"
+                          android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:layout_height="match_parent">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="装置编号："
+                            android:layout_weight="2.0"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"/>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1.3"
+                            android:id="@+id/codeOfDevice"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="horizontal"
+                              android:layout_height="match_parent">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="装置地址："
+                            android:layout_weight="2.0"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"/>
+                    <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1.3"
+                            android:id="@+id/ipAddress"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_weight="3.5"
+                          android:orientation="horizontal"
+                          android:layout_gravity="center_vertical"
+                          android:layout_height="wrap_content">
+                <Button android:layout_width="wrap_content"
+                          android:text="特高频"
+                          android:textSize="17sp"
+                          style="@style/Widget.AppCompat.Button.Colored"
+                          android:id="@+id/currentType"
+                          android:textColor="@color/white"
+                          android:layout_height="65dp"/>
+             </LinearLayout>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_weight="1"
+    >
+
+        <com.pd.config.pdonlineconfig.vies.NoScrollViewPage
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="9"
+                      android:paddingTop="5dp"
+                      android:orientation="horizontal"
+        >
+            <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyCustomTabLayout"
+                   android:visibility="gone"
+                    app:tabMinWidth="80dp"
+                    app:tabMode="scrollable">
+            </android.support.design.widget.TabLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_weight="1"
+                          android:paddingTop="4dp"
+                          android:layout_height="match_parent">
+                <Button android:layout_width="match_parent"
+                        android:text="启动"
+                        android:textSize="@dimen/defaultBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="45dp"
+                        android:id="@+id/start"
+                    android:layout_weight="1"
+                />
+                <Button android:layout_width="match_parent"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:id="@+id/chartBtn"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="@dimen/defaultBtn"
+                        android:text="谱图"
+                />
+                <Button android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="45dp"
+                        android:text=""
+                        android:textSize="@dimen/defaultBtn"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/config"
+                />
+                <Button android:layout_width="match_parent"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="45dp"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:enabled="true"
+                        android:id="@+id/custom"
+                        android:text="配置"
+                        android:textSize="@dimen/defaultBtn"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="visible"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

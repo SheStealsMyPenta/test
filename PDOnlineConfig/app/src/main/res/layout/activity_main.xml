@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/toolbar"
+                                       android:layout_height="wrap_content"
+                                       android:layout_width="match_parent"
+                                       android:background="@color/colorPrimary">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="运行参数"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical"
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_height="match_parent">
+            <RadioGroup
+                    android:id="@+id/used_datafile_RadioGoup"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                <!--全部-->
+
+
+
+                <!--特高频-->
+
+
+
+                <!--接触式超声-->
+
+                <RadioButton
+                        android:id="@+id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:checked="true"
+                        android:textSize="@dimen/defaultBtn"
+                        android:background="@drawable/used_radio_selecter"
+                        android:button="@null"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/info"
+                        android:textColor="@color/white" />
+
+                <!--高频电流-->
+
+
+                <!--暂态地电压-->
+
+                <RadioButton
+                        android:id="@+id/runTimeConfig"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/used_radio_selecter"
+                        android:button="@null"
+                        android:textSize="@dimen/defaultBtn"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/config"
+                        android:textColor="@color/white" />
+
+                <!--空气式超声-->
+
+
+            </RadioGroup>
+            <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/spilt_line_color" />
+            <com.pd.config.pdonlineconfig.vies.NoScrollViewPage
+                    android:id="@+id/viewPager"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="10"
+                      android:orientation="horizontal"
+        >
+
+            <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyCustomTabLayout"
+                    android:visibility="gone"
+                    app:tabMinWidth="80dp"
+                    app:tabMode="scrollable">
+            </android.support.design.widget.TabLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent">
+                <Button android:layout_width="match_parent"
+                        android:text="保存"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/save"
+                        android:layout_weight="1"
+                />
+                <Button android:layout_width="match_parent"
+
+                        android:layout_weight="1"
+                        android:id="@+id/log"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:text="日志"
+                />
+                <Button android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_default"
+                        android:layout_height="40dp"
+                        android:text="数据"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/data"
+                />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

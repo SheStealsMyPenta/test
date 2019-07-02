@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_round_white"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:text="添加监测装置"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    <View android:layout_width="match_parent"
+          android:background="@color/black"
+          android:layout_height="2px"/>
+    <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_weight="1"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="4"
+                      android:text="设备名称："
+                      android:id="@+id/text11"
+                      android:textColor="@color/black"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+            />
+            <View android:layout_width="2px"
+                  android:layout_height="match_parent"
+                  android:background="@color/black"
+            />
+            <EditText android:layout_width="match_parent"
+                      android:paddingLeft="10dp"
+                      android:layout_marginLeft="3dp"
+                      android:layout_marginRight="18dp"
+                      android:background="@drawable/bg_edittext"
+                      android:layout_weight="1"
+                      android:textSize="15dp"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:layout_height="40dp"
+                      android:id="@+id/nameOfWatchedDevice"
+            />
+
+            />
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:background="@color/black"
+              android:layout_height="2px"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_weight="1"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="4"
+                      android:text="设备编号："
+                      android:id="@+id/text12"
+                      android:textColor="@color/black"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+            />
+            <View android:layout_width="2px"
+                  android:layout_height="match_parent"
+                  android:background="@color/black"
+            />
+            <EditText android:layout_width="match_parent"
+                      android:paddingLeft="10dp"
+                      android:layout_marginLeft="3dp"
+                      android:layout_marginRight="18dp"
+                      android:background="@drawable/bg_edittext"
+                      android:layout_weight="1"
+                      android:textSize="15dp"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:layout_height="40dp"
+                      android:id="@+id/codeOfWatchedDevice"
+            />
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+              android:layout_height="2px"
+              android:background="@color/black"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal"
+                      android:layout_height="match_parent"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="4"
+                      android:text="设备类型："
+                      android:id="@+id/text13"
+                      android:textColor="@color/black"
+                      android:textAlignment="center"
+                      android:gravity="center_vertical"
+            />
+            <View android:layout_width="2px"
+                  android:layout_height="match_parent"
+                  android:background="@color/black"
+            />
+            <android.support.v7.widget.AppCompatSpinner
+
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+
+                    android:id="@+id/typeOfWatchedDevice"
+                    android:layout_height="match_parent"></android.support.v7.widget.AppCompatSpinner>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_dialog_left_white"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+
+        <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_dialog_right_white"
+                android:gravity="center"
+                android:layout_weight="1.0"
+                android:text="添加"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>

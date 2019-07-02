@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="com.pd.config.pdonlineconfig">
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILE"/>
+    <!-- 往SD卡中写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permisssion.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+                     tools:ignore="ProtectedPermissions"/>
+    <application
+
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.MainActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme"
+        >
+
+        </activity>
+        <activity android:name=".activities.First_ListOfDeviceActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme"
+
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.TestActivity"
+                  android:screenOrientation="portrait"
+                  android:hardwareAccelerated="true"
+                  android:theme="@style/testTheme"
+        >
+
+        </activity>
+
+        <activity android:name=".activities.BindMonitorDeviceAndWatchedDeviceActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme"
+
+        >
+
+        </activity>
+        <activity android:name=".activities.WatchedDeviceActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme"
+        >
+
+        </activity>
+        <activity android:name=".activities.MonitorDeviceManageActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme"
+        >
+
+
+        </activity>
+        <activity android:name=".activities.MainControllerActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme">
+
+        </activity>
+        <activity android:name=".activities.SystemConfigActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme"
+        >
+
+        </activity>
+        <activity android:name=".activities.SystemInfoActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme">
+
+        </activity>
+        <activity android:name=".activities.CubicleTestActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme">
+
+        </activity>
+        <activity android:name=".activities.CubicleTestAEActicity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme">
+
+        </activity>
+        <activity android:name=".activities.CubicleTestHFActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme">
+
+        </activity>
+        <activity android:name=".activities.CubicleTestTEVActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/testTheme">
+
+        </activity>
+    </application>
+
+
+</manifest>

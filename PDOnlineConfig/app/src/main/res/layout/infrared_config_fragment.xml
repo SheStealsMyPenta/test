@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="30dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@drawable/text_border"
+                                        android:elevation="30dp"
+                                        android:layout_marginRight="10dp"
+    >
+        <android.support.v4.widget.SwipeRefreshLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="500dp"
+                android:orientation="vertical"
+                android:id="@+id/swipeLayout">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical"
+            >
+
+
+                <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/used_aa_special_text_11"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textSize="16dp"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="30px"
+                            android:text="辐射率："
+                            android:textColor="@color/black"/>
+                    <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.6">
+
+                        <EditText
+                                android:id="@+id/rateValue"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="left|center_vertical"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:paddingLeft="10dp"
+                                android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+
+                            android:layout_width="0px"
+                            android:text=" %"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:id="@+id/used_aa_special_text_21"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textSize="16dp"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="30px"
+                            android:text="测试距离："
+                            android:textColor="@color/black"/>
+                    <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.6">
+
+                        <EditText
+                                android:id="@+id/distance"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="left|center_vertical"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:paddingLeft="10dp"
+                                android:textSize="16dp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/brightnessValue"
+                            android:layout_width="0px"
+                            android:text="米"
+                            android:textSize="16dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/text_3"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textSize="16dp"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="30px"
+                            android:text="大气温度："
+                            android:textColor="@color/black"/>
+
+                    <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.6">
+
+                        <EditText
+                                android:id="@+id/atoTempValue"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="left|center_vertical"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:paddingLeft="10dp"
+                                android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:textSize="16dp"
+                            android:gravity="left|center_vertical"
+                            android:text="℃"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/used_aa_special_text_31"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textSize="16dp"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="30px"
+                            android:text="相对湿度："
+                            android:textColor="@color/black"/>
+
+                    <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.6">
+                        <EditText
+                                android:id="@+id/relateHumValue"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="left|center_vertical"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:paddingLeft="10dp"
+                                android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:textSize="16dp"
+                            android:gravity="left|center_vertical"
+                            android:text="%"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/used_aa_special_text_51"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textSize="16dp"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="30px"
+                            android:text="反射温度："
+                            android:textColor="@color/black"/>
+
+                    <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+
+                            android:layout_weight="1.6">
+                        <EditText
+                                android:id="@+id/reflectTempValue"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/bg_edittext"
+                                android:gravity="left|center_vertical"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:paddingLeft="10dp"
+                                android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:textSize="16dp"
+                            android:gravity="left|center_vertical"
+                            android:text="0 ℃"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/used_aa_special_text_FF1"-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.3"-->
+                <!--android:gravity="right|center_vertical"-->
+                <!--android:paddingRight="30px"-->
+                <!--android:text="@string/format"-->
+                <!--android:textColor="@color/black"/>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_weight="1.6">-->
+
+                <!--<Spinner-->
+                <!--android:id="@+id/format"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/bg_edittext"-->
+                <!--android:entries="@array/format"-->
+                <!--android:gravity="center_vertical|center_horizontal"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/used_aa_special_text_FF2"-->
+                <!--android:layout_width="0px"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="0.6"-->
+                <!--android:gravity="left|center_vertical"-->
+
+                <!--android:textColor="@color/black"/>-->
+                <!--</LinearLayout>-->
+
+
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

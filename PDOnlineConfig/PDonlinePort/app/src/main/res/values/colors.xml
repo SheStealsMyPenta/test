@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#cccccc</color>
+    <color name="red">#ff0000</color>
+    <color name="orange_light">#ff8c00</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#4876Ff</color>
+    <color name="green">#00ff99</color>
+    <color name="spilt_line_color">#adadad</color>
+    <color name ="QP_Color">#00ff00</color>
+    <color name="Format_Color">#7f7f7f</color>
+    <color name="GREY_1">#9F9F9F</color>
+</resources>
